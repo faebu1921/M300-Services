@@ -22,10 +22,11 @@ Was war mir neu:
 
 Key erstellen
 
-  $  ssh-keygen -t rsa -b 4096 -C "Fabian.Oppliger@gmail.com"
+        ssh-keygen -t rsa -b 4096 -C "Fabian.Oppliger@gmail.com"
 
 Agent aktivieren 
-    eval "$(ssh-agent -s)"
+
+        eval "$(ssh-agent -s)"
 
 SSH Key automatisch dem Agent hinzufügen
 
@@ -42,4 +43,4 @@ in der Bash : ssh-add -k ~/.ssh/id_rsa
 
 
 SSH Key auslesen für zb Github
-    cat ~/.ssh/id_rsa.pub
+        cat ~/.ssh/id_rsa.pub
