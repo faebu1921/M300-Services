@@ -1,2 +1,2 @@
 # M300-Services
-Modul 300 MD
+Dies ist die Dokumentation von Fabian Oppliger bezüglich der LB02 für Modul 300
