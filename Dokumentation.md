@@ -125,75 +125,75 @@ Vagrant destroy -f: löscht VM behält jedoch das File <br>
 ## Config meines Webservers
 
 #webserver
-  config.vm.define "web" do |web|
-    web.vm.hostname = "apache"
-    web.vm.network "private_network", ip: "192.168.55.101"
-    web.vm.box = "ubuntu/xenial64"
-    web.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true
-    web.vm.synced_folder ".", "/var/www/html" 
+  config.vm.define "web" do |web| <br>
+    web.vm.hostname = "apache"<br>
+    web.vm.network "private_network", ip: "192.168.55.101"<br>
+    web.vm.box = "ubuntu/xenial64"<br>
+    web.vm.network "forwarded_port", guest:80, host:8080, auto_correct: true<br>
+    web.vm.synced_folder ".", "/var/www/html" <br>
   
-   web.vm.provider "virtualbox" do |vb|
-    vb.name = "apache"
-    vb.memory = "512"  
+   web.vm.provider "virtualbox" do |vb|<br>
+    vb.name = "apache"<br>
+    vb.memory = "512"  <br>
   end
 
-Hier wird Memory, syncfolder für den apacheserver etc definiert.
+Hier wird Memory, syncfolder für den apacheserver etc definiert.<br>
 
 ## installation meines Webservers
 
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install -y apache2
+sudo apt-get update<br>
+sudo apt-get upgrade<br>
+sudo apt-get install -y apache2<br>
 
 ## User erstellen
 
-sudo useradd fabian
-sudo usermod -aG sudo fabian
+sudo useradd fabian<br>
+sudo usermod -aG sudo fabian<br>
 
 
 ## Installation meiner Firewall
 
 Firewall:
 
-sudo apt-get install ufw # ufw Firewall installieren)
-sudo ufw default deny incoming # default deny inbound
-sudo ufw default allow outgoing # default allow outbound
-sudo ufw allow 80/tcp # öffnet den port 80 TCP
-sudo ufw allow 443/tcp # öffnet den port 443 TCP
-sudo ufw allow 22/tcp # öffnet den port 22 TCP für SSH 
-echo "y" | sudo ufw enable # Firewall aktivieren mit der ausgabe Y
+sudo apt-get install ufw # ufw Firewall installieren)<br>
+sudo ufw default deny incoming # default deny inbound<br>
+sudo ufw default allow outgoing # default allow outbound<br>
+sudo ufw allow 80/tcp # öffnet den port 80 TCP<br>
+sudo ufw allow 443/tcp # öffnet den port 443 TCP<br>
+sudo ufw allow 22/tcp # öffnet den port 22 TCP für SSH <br>
+echo "y" | sudo ufw enable # Firewall aktivieren mit der ausgabe Y<br>
 
 
 
 ## Fehlgeschlagener Ldap
 
-config.vm.define "master" do |master|
-  master.vm.box = "ubuntu/xenial64"
-master.vm.provider "virtualbox" do |vb|
-  vb.memory = "256"  
-end
-  master.vm.hostname = "master"
-  master.vm.network "private_network", ip: "192.168.55.102"
-  master.vm.network "forwarded_port", guest:80, host:8081, auto_correct: false
-  master.vm.synced_folder ".", "/vagrant"  	
-master.vm.provision "shell", inline: <<-SHELL
-sudo apt-get update
-sudo apt-get -y install debconf-utils apache2 nmap
-sudo a2enmod cgi	
-sudo a2enmod ldap	
-sudo a2enmod authnz_ldap
-sudo cp /vagrant/rest /vagrant/network /usr/lib/cgi-bin/ && sudo chown www-data /usr/lib/cgi-bin/* && sudo chmod 755 /usr/lib/cgi-bin/*
-sudo mkdir -p  /var/www/html/data && sudo chown www-data:www-data /var/www/html/data 
-export DEBIAN_FRONTEND=noninteractive
-sudo debconf-set-selections <<<'slapd slapd/internal/generated_adminpw password admin'
-sudo debconf-set-selections <<<'slapd slapd/password2 password admin'
-sudo debconf-set-selections <<<'slapd slapd/internal/adminpw password admin'
-sudo debconf-set-selections <<<'slapd slapds/password1 password admin'
-sudo apt-get install -y slapd ldap-utils phpldapadmin
+config.vm.define "master" do |master|<br>
+  master.vm.box = "ubuntu/xenial64"<br>
+master.vm.provider "virtualbox" do |vb|<br>
+  vb.memory = "256"  <br>
+end<br>
+  master.vm.hostname = "master"<br>
+  master.vm.network "private_network", ip: "192.168.55.102"<br>
+  master.vm.network "forwarded_port", guest:80, host:8081, auto_correct: false<br>
+  master.vm.synced_folder ".", "/vagrant"  	<br>
+master.vm.provision "shell", inline: <<-SHELL<br>
+sudo apt-get update<br>
+sudo apt-get -y install debconf-utils apache2 nmap<br>
+sudo a2enmod cgi	<br>
+sudo a2enmod ldap	<br>
+sudo a2enmod authnz_ldap<br>
+sudo cp /vagrant/rest /vagrant/network /usr/lib/cgi-bin/ && sudo chown www-data /usr/lib/cgi-bin/* && sudo chmod 755 /usr/lib/cgi-bin/*<br>
+sudo mkdir -p  /var/www/html/data && sudo chown www-data:www-data /var/www/html/data <br>
+export DEBIAN_FRONTEND=noninteractive<br>
+sudo debconf-set-selections <<<'slapd slapd/internal/generated_adminpw password admin'<br>
+sudo debconf-set-selections <<<'slapd slapd/password2 password admin'<br>
+sudo debconf-set-selections <<<'slapd slapd/internal/adminpw password admin'<br>
+sudo debconf-set-selections <<<'slapd slapds/password1 password admin'<br>
+sudo apt-get install -y slapd ldap-utils phpldapadmin<br>
 
-sudo sed -i -e's/dc=example,dc=com/dc=nodomain/' /etc/phpldapadmin/config.php
-sudo service apache2 restart 
-SHELL
+sudo sed -i -e's/dc=example,dc=com/dc=nodomain/' /etc/phpldapadmin/config.php<br>
+sudo service apache2 restart <br>
+SHELL<br>
 
 
 
@@ -201,8 +201,8 @@ SHELL
 
 Zuallererst hatte ich extreme Probleme die ganze Thematik zu verstehen. Ich habe mich dann jedoch mit einem Beispiel ( einem vorgegebenen Vagrantfile )auseinander gesetzt 
 und konnte dann stück für stück die abhängigkeit und auch Strukturierung der Vagrantfiles verstehen. Ebenfalls ist mir nun die ganze Virtualisierungsthematik deutlich klarer geworden.
-Gerne hätte ich noch weiter herum experimentiert aber hierführ hatte ich in LB02 keine Zeit.
+Gerne hätte ich noch weiter herum experimentiert aber hierführ hatte ich in LB02 keine Zeit.<br>
 
-Ebenfalls habe ich Markdown kennengelernt inclusive Github. Persönlich finde ich dies eine tolle Kombination und überlege mir dies auch Pirvat zuzulegen da die Administration etc. extrem einfach und nachvollziehbar ist.
+Ebenfalls habe ich Markdown kennengelernt inclusive Github. Persönlich finde ich dies eine tolle Kombination und überlege mir dies auch Pirvat zuzulegen da die Administration etc. extrem einfach und nachvollziehbar ist.<br>
 
 Im grossen und ganzen habe ich sehr viel bezüglich Virtualisierung und Markdown gelernt. jedoch waren die anderen Themsen bisher eher Auffrischung.
