@@ -61,59 +61,64 @@ Dieser wurde dann auf dem erstellten GITHUB- Konto hinterlegt
 
 Linux:
 
-Zuvor: Mit Linux habe ich bereits ein wenig erfahrung und kannte mich mit den Basics aus.
-Jetzt: Mein Wissensstand blieb unverändert bezüglich Linux
+Zuvor: Mit Linux habe ich bereits ein wenig erfahrung und kannte mich mit den  Basics aus. <br>
+Jetzt: Mein Wissensstand blieb unverändert bezüglich Linux <br>
 
 Virtualisierung
-Zuvor: Virtualisierung war mir zuvor ein Begriff, habe jedoch nochnie zuvor damit gearbeitet.
-Jetzt: Ich konnte meine ersten Erfahrungen sammeln und bin davon begeistert. Man kann Ressourcen sparen und ebenfalls sind sind zb Container oder VM viel schneller aufgesetzt.
+
+Zuvor: Virtualisierung war mir zuvor ein Begriff, habe jedoch nochnie zuvor damit gearbeitet. <br>
+Jetzt: Ich konnte meine ersten Erfahrungen sammeln und bin davon begeistert. Man kann Ressourcen sparen und ebenfalls sind sind zb Container oder VM viel schneller aufgesetzt.<br>
 
 VirtualBox
-Zuvor: Virtualbox habe ich bereits in anderen Moduls eingesetzt.
+
+Zuvor: Virtualbox habe ich bereits in anderen Moduls eingesetzt.<br>
 Jetzt: Seit diesem Modul ist mir auch bewusst, dass es sich hierbei um einen Hypervisor Typ2 handelt. Ich habe ein wenig erfahren was hinter dem Programm steckt.
 
 Markdown
-Zuvor: Zuvor habe ich noch nie von Markdown gehört bzw damit gerarbeitet.
+
+Zuvor: Zuvor habe ich noch nie von Markdown gehört bzw damit gerarbeitet.<br>
 Jetzt: Nun konnte ich erste Erfahrungen mit Markdown erarbeiten. Das beste an dieser Dokumentationsart finde ich die Nachvollziehbarkeit. Wenn etwas angepasst wurde sieht man von wem
-und im besten Fall ist ein nützlicher Kommentar dazu vorhanden
+und im besten Fall ist ein nützlicher Kommentar dazu vorhanden<br>
 
 Wir verwenden Markdown als Dokumentationstool.
 
 Systemsicherheit
-Zuvor: Mir waren die Basics der Netzwerksicherheit bekannt.
-Jetzt: Mein Wissen hierzu hat sich nicht gross vermehr. Jedoch konnte ich besser nachvollziehen wie die UFW Firewall funktioniert.
+
+Zuvor: Mir waren die Basics der Netzwerksicherheit bekannt.<br>
+Jetzt: Mein Wissen hierzu hat sich nicht gross vermehr. Jedoch konnte ich besser nachvollziehen wie die UFW Firewall funktioniert.<br>
 
 Git
-Zuvor: Keine Vorkenntnisse vorhanden
-Jetzt: Ich habe nun zum erstenmal mit Git gerarbeitet 
 
-Folgende Befehle habe ich kennengelernt:
+Zuvor: Keine Vorkenntnisse vorhanden<br>
+Jetzt: Ich habe nun zum erstenmal mit Git gerarbeitet <br>
 
-git clone: ermöglicht es ein Repository  zu Clonen
-gitt add: Datei für Upload vorbereiten
-git pull: Repository aktuallisieren
+Folgende Befehle habe ich kennengelernt:<br>
 
-git commit: Upload bestätigen mit einem Kommentar
-git push: Upload hochladen 
+git clone: ermöglicht es ein Repository  zu Clonen<br>
+gitt add: Datei für Upload vorbereiten<br>
+git pull: Repository aktuallisieren<br>
+
+git commit: Upload bestätigen mit einem Kommentar<br>
+git push: Upload hochladen <br>
 
 
 Vagrant
-zuvor: Ich habe zuvor noch nie mit Vagrant gearbeitet
-Jetzt: Am Afang war es schwer sich in das Thema einzuarbeiten aber mit Beispiel Scripts etc konnte ich Stück für Stück die Struktur eines Vagrant Files nachvollziehen zb mit den Alias etc.
 
-Vagrant kann verwenden werden um jederzeit seine Virtuelle Umgebung aufzusetzen oder zu testen.
+zuvor: Ich habe zuvor noch nie mit Vagrant gearbeitet<br>
+Jetzt: Am Afang war es schwer sich in das Thema einzuarbeiten aber mit Beispiel Scripts etc konnte ich Stück für Stück die Struktur eines Vagrant Files nachvollziehen zb mit den Alias etc.<br>
 
-Folgende Befehle habe ich kennengelernt:
+Vagrant kann verwenden werden um jederzeit seine Virtuelle Umgebung aufzusetzen oder zu testen.<br>
 
-Vagrant init: Erstellt Vagrant File
-Vagrant up: Startet VM und richtet VM nach Vagrant File ein
-Vagrant ssh: SSH verbindung auf die VM
-Vagrant status: Status anzeige der VM
-Vagrant port: Anzeige der Weitergeleiteten Ports von der VM
-Vagrant halt: Stoppt laufende VM
-Vagrant destroy: löscht die Umgebung
-Vagrant destroy -f: löscht VM behält jedoch das File
+Folgende Befehle habe ich kennengelernt:<br>
 
+Vagrant init: Erstellt Vagrant File<br>
+Vagrant up: Startet VM und richtet VM nach Vagrant File ein<br>
+Vagrant ssh: SSH verbindung auf die VM<br>
+Vagrant status: Status anzeige der VM<br>
+Vagrant port: Anzeige der Weitergeleiteten Ports von der VM<br>
+Vagrant halt: Stoppt laufende VM<br>
+Vagrant destroy: löscht die Umgebung<br>
+Vagrant destroy -f: löscht VM behält jedoch das File <br>
 
 
 
@@ -200,4 +205,4 @@ Gerne hätte ich noch weiter herum experimentiert aber hierführ hatte ich in LB
 
 Ebenfalls habe ich Markdown kennengelernt inclusive Github. Persönlich finde ich dies eine tolle Kombination und überlege mir dies auch Pirvat zuzulegen da die Administration etc. extrem einfach und nachvollziehbar ist.
 
-Im grossen und ganzen habe ich sehr viel bezüglich Virtualisierung und Markdown gelernt. jedoch waren die anderen Themen bisher eher Auffrischung.
+Im grossen und ganzen habe ich sehr viel bezüglich Virtualisierung und Markdown gelernt. jedoch waren die anderen Themsen bisher eher Auffrischung.
