@@ -17,6 +17,11 @@ Vagrant.configure(2) do |config|
     #install webserver
     sudo apt-get update
     sudo apt-get -y install apache2 
+    #https
+    sudo a2ensite default-ssl.conf
+    sudo a2enmod ssl
+    sudo a2dissite 000-default.conf 
+    sudo service apache2 restart 
     #fw
     sudo apt-get install ufw
     sudo ufw default deny incoming
@@ -28,6 +33,9 @@ Vagrant.configure(2) do |config|
     #myuser
     sudo useradd fabian
     sudo usermod -aG sudo fabian
+        #ssh Key erstellen
+        #mkdir .ssh && chmod 700 .ssh
+        #ssh-keygen -t rsa -f .ssh/id_rsa -b 4096 -C vagrant@srv-nv -P ''
   SHELL
   end
 
