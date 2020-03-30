@@ -163,7 +163,28 @@ sudo ufw allow 443/tcp # öffnet den port 443 TCP<br>
 sudo ufw allow 22/tcp # öffnet den port 22 TCP für SSH <br>
 echo "y" | sudo ufw enable # Firewall aktivieren mit der ausgabe Y<br>
 
+##Testfälle 
 
+
+###Test Nr1 
+
+Ersteller des Testfalls: Fabian Oppliger<br>
+Tester: Fabian Oppliger<br>
+Test wurde am 30.03.2020 durchgeführt<br>
+
+Soll: Apache webinterface über Lokalhost aufrufen<br>
+Wie wurde getestet: Vom Localhost per http://127.0.0.1:8080/ auf den Apache zugreifen<br>
+
+Ist: Localhost kann per Webinterface auf den Apache zugreifen.<br>
+
+###Test Nr2
+Ersteller des Testfalls: Fabian Oppliger<br>
+Tester: Fabian Oppliger<br>
+Test wurde am 30.03.2020 durchgeführt<br>
+
+Soll: In der Virtuellen Umgebung sollte "/var/www/html" mit dem Lokalen Ordner C:\Users\Fabian\M300\M300-Services synchronisieren<br>
+Wie wurde getestet: Das erzeugte Index.html file wird gelöscht, danach sollte auf dem Weinterface nur eine Directory zu sehen sein.<br>
+Ist: Die Ordner synchronisieren, sobald das Index.html file gelöscht wird, wird die aktuelle directory angezeigt<br>
 
 ## Fehlgeschlagener Ldap
 
